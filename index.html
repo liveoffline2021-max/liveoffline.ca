@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiveOffline — Developer</title>
+
+  <meta name="description" content="LiveOffline is an independent developer building privacy-friendly, offline-first mobile and web applications." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --text: #202124;
+      --muted: #5f6368;
+      --bg: #ffffff;
+      --card: #f8f9fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 14px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>LiveOffline</h1>
+    <p>
+      Independent developer focused on privacy-first, offline-capable
+      mobile and web applications.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <h2>Apps & Projects</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Android Apps</h3>
+          <p>
+            Published applications on Google Play designed for performance,
+            usability, and offline reliability.
+          </p>
+          <a href="https://play.google.com/store/apps/dev?id=7596392458421061385" target="_blank" rel="noopener">
+            View on Google Play →
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>
+            Lightweight, fast, and accessible websites using modern
+            web standards.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Privacy & Offline-First</h3>
+          <p>
+            Minimal tracking, no unnecessary data collection,
+            and functionality that works without an internet connection.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About</h2>
+      <p style="max-width: 700px; color: var(--muted);">
+        LiveOffline builds software with a focus on simplicity, longevity,
+        and user trust. Projects emphasize offline functionality,
+        transparent behavior, and efficient design across Android
+        and the web.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      © <span id="year"></span> LiveOffline
+    </div>
+    <div style="margin-top: 10px;">
+      <a href="https://play.google.com/store/apps/dev?id=7596392458421061385" target="_blank" rel="noopener">
+        Google Play
+      </a>
+      <a href="mailto:contact@liveoffline.ca">
+        Contact
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
